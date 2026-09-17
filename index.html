@@ -185,3 +185,402 @@
         messages.scrollTop = messages.scrollHeight;
     }
 </script>
+<div class="logo">
+    MySocial ♡
+</div>
+
+<input class="search" placeholder="🔍  Поиск">
+
+<div class="header-right">
+    <div class="header-icon">♡</div>
+    <div class="header-icon">🔔</div>
+    <div class="avatar-small">🌸</div>
+    <b>Яна⌄</b>
+</div>
+<!-- Меню -->
+
+<aside class="menu">
+
+    <div class="menu-item active">
+        <span class="menu-icon">💬</span>
+        Чаты
+    </div>
+
+    <div class="menu-item">
+        <span class="menu-icon">👥</span>
+        Друзья
+    </div>
+
+    <div class="menu-item">
+        <span class="menu-icon">♡</span>
+        Группы
+    </div>
+
+    <div class="menu-item">
+        <span class="menu-icon">🔖</span>
+        Закладки
+    </div>
+
+    <div class="menu-item">
+        <span class="menu-icon">⚙️</span>
+        Настройки
+    </div>
+
+</aside>
+
+
+<!-- Список чатов -->
+
+<section class="chats">
+
+    <div class="chats-title">
+        Мои чаты 🌸
+    </div>
+
+    <input
+        class="chat-search"
+        placeholder="🔍  Поиск чатов"
+    >
+
+    <div class="chat selected">
+        <div class="avatar">🌷</div>
+
+        <div class="chat-info">
+            <div class="chat-name">Алина</div>
+            <div class="last-message">
+                Привет! Как дела? 💗
+            </div>
+        </div>
+
+        <div class="time">18:42</div>
+    </div>
+
+    <div class="chat">
+        <div class="avatar">🌸</div>
+
+        <div class="chat-info">
+            <div class="chat-name">Максим</div>
+            <div class="last-message">
+                Давай встретимся завтра?
+            </div>
+        </div>
+
+        <div class="time">17:30</div>
+    </div>
+
+    <div class="chat">
+        <div class="avatar">🌺</div>
+
+        <div class="chat-info">
+            <div class="chat-name">Даша</div>
+            <div class="last-message">
+                Скину фотки позже ✨
+            </div>
+        </div>
+
+        <div class="time">16:12</div>
+    </div>
+
+    <div class="chat">
+        <div class="avatar">🌷</div>
+
+        <div class="chat-info">
+            <div class="chat-name">Артём</div>
+            <div class="last-message">
+                Хорошо, увидимся!
+            </div>
+        </div>
+
+        <div class="time">15:03</div>
+    </div>
+
+    <div class="chat">
+        <div class="avatar">👥</div>
+
+        <div class="chat-info">
+            <div class="chat-name">Наша группа</div>
+            <div class="last-message">
+                Катя: Всем привет! 💕
+            </div>
+        </div>
+
+        <div class="time">14:21</div>
+    </div>
+
+</section>
+
+
+<!-- Окно чата -->
+
+<main class="chat-window">
+
+    <div class="chat-header">
+
+        <div class="avatar">🌷</div>
+
+        <div>
+            <b>Алина</b>
+            <div class="online">
+                ● В сети
+            </div>
+        </div>
+
+        <div class="chat-actions">
+            📞 &nbsp; 🎥 &nbsp; ⋮
+        </div>
+
+    </div>
+
+
+    <div class="messages" id="messages">
+
+        <div class="date">
+            Сегодня 🌸
+        </div>
+
+        <div class="message">
+            Привет! 👋
+            <small>18:35</small>
+        </div>
+
+        <div class="message my">
+            Привет! Как дела? 💗
+            <small>18:36 ✓✓</small>
+        </div>
+
+        <div class="message">
+            Нормально, а у тебя? 😊
+            <small>18:37</small>
+        </div>
+
+        <div class="message my">
+            Тоже хорошо! Что делаешь?
+            <small>18:38 ✓✓</small>
+        </div>
+
+        <div class="message">
+            Сейчас сижу дома, смотрю сериал 📺
+            <small>18:39</small>
+        </div>
+
+        <div class="message my">
+            Какой? 🌸
+            <small>18:40 ✓✓</small>
+        </div>
+
+        <div class="message">
+            Пишу тебе, он не очень 😂
+            <small>18:41</small>
+        </div>
+
+    </div>
+
+
+    <div class="input-area">
+
+        <input
+            id="messageInput"
+            class="message-input"
+            type="text"
+            placeholder="Написать сообщение..."
+        >
+
+        <button class="send" onclick="sendMessage()">
+            ➤
+        </button>
+
+    </div>
+    <!-- Меню -->
+
+<aside class="menu">
+
+    <div class="menu-item active">
+        <span class="menu-icon">💬</span>
+        Чаты
+    </div>
+
+    <div class="menu-item">
+        <span class="menu-icon">👥</span>
+        Друзья
+    </div>
+
+    <div class="menu-item">
+        <span class="menu-icon">♡</span>
+        Группы
+    </div>
+
+    <div class="menu-item">
+        <span class="menu-icon">🔖</span>
+        Закладки
+    </div>
+
+    <div class="menu-item">
+        <span class="menu-icon">⚙️</span>
+        Настройки
+    </div>
+
+</aside>
+
+
+<!-- Список чатов -->
+
+<section class="chats">
+
+    <div class="chats-title">
+        Мои чаты 🌸
+    </div>
+
+    <input
+        class="chat-search"
+        placeholder="🔍  Поиск чатов"
+    >
+
+    <div class="chat selected">
+        <div class="avatar">🌷</div>
+
+        <div class="chat-info">
+            <div class="chat-name">Алина</div>
+            <div class="last-message">
+                Привет! Как дела? 💗
+            </div>
+        </div>
+
+        <div class="time">18:42</div>
+    </div>
+
+    <div class="chat">
+        <div class="avatar">🌸</div>
+
+        <div class="chat-info">
+            <div class="chat-name">Максим</div>
+            <div class="last-message">
+                Давай встретимся завтра?
+            </div>
+        </div>
+
+        <div class="time">17:30</div>
+    </div>
+
+    <div class="chat">
+        <div class="avatar">🌺</div>
+
+        <div class="chat-info">
+            <div class="chat-name">Даша</div>
+            <div class="last-message">
+                Скину фотки позже ✨
+            </div>
+        </div>
+
+        <div class="time">16:12</div>
+    </div>
+
+    <div class="chat">
+        <div class="avatar">🌷</div>
+
+        <div class="chat-info">
+            <div class="chat-name">Артём</div>
+            <div class="last-message">
+                Хорошо, увидимся!
+            </div>
+        </div>
+
+        <div class="time">15:03</div>
+    </div>
+
+    <div class="chat">
+        <div class="avatar">👥</div>
+
+        <div class="chat-info">
+            <div class="chat-name">Наша группа</div>
+            <div class="last-message">
+                Катя: Всем привет! 💕
+            </div>
+        </div>
+
+        <div class="time">14:21</div>
+    </div>
+
+</section>
+
+
+<!-- Окно чата -->
+
+<main class="chat-window">
+
+    <div class="chat-header">
+
+        <div class="avatar">🌷</div>
+
+        <div>
+            <b>Алина</b>
+            <div class="online">
+                ● В сети
+            </div>
+        </div>
+
+        <div class="chat-actions">
+            📞 &nbsp; 🎥 &nbsp; ⋮
+        </div>
+
+    </div>
+
+
+    <div class="messages" id="messages">
+
+        <div class="date">
+            Сегодня 🌸
+        </div>
+
+        <div class="message">
+            Привет! 👋
+            <small>18:35</small>
+        </div>
+
+        <div class="message my">
+            Привет! Как дела? 💗
+            <small>18:36 ✓✓</small>
+        </div>
+
+        <div class="message">
+            Нормально, а у тебя? 😊
+            <small>18:37</small>
+        </div>
+
+        <div class="message my">
+            Тоже хорошо! Что делаешь?
+            <small>18:38 ✓✓</small>
+        </div>
+
+        <div class="message">
+            Сейчас сижу дома, смотрю сериал 📺
+            <small>18:39</small>
+        </div>
+
+        <div class="message my">
+            Какой? 🌸
+            <small>18:40 ✓✓</small>
+        </div>
+
+        <div class="message">
+            Пишу тебе, он не очень 😂
+            <small>18:41</small>
+        </div>
+
+    </div>
+
+
+    <div class="input-area">
+
+        <input
+            id="messageInput"
+            class="message-input"
+            type="text"
+            placeholder="Написать сообщение..."
+        >
+
+        <button class="send" onclick="sendMessage()">
+            ➤
+        </button>
+
+    </div>
+    </main>
