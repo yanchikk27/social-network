@@ -1,0 +1,187 @@
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background: #e7ebf0;
+    }
+
+    .header {
+        height: 60px;
+        background: #229ed9;
+        color: white;
+        display: flex;
+        align-items: center;
+        padding: 0 25px;
+        font-size: 22px;
+        font-weight: bold;
+    }
+
+    .container {
+        display: flex;
+        height: calc(100vh - 60px);
+    }
+
+    .sidebar {
+        width: 300px;
+        background: white;
+        border-right: 1px solid #ddd;
+        padding: 15px;
+    }
+
+    .profile {
+        padding: 15px;
+        background: #f1f3f5;
+        border-radius: 12px;
+        margin-bottom: 15px;
+    }
+
+    .profile-name {
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .user {
+        padding: 14px;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-bottom: 5px;
+    }
+
+    .user:hover {
+        background: #e9f5fc;
+    }
+
+    .chat {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        background: #dfe8ef;
+    }
+
+    .chat-header {
+        background: white;
+        padding: 15px 20px;
+        font-size: 18px;
+        font-weight: bold;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .messages {
+        flex: 1;
+        padding: 25px;
+    }
+
+    .message {
+        background: white;
+        padding: 10px 14px;
+        border-radius: 12px;
+        margin-bottom: 10px;
+        width: fit-content;
+        max-width: 60%;
+    }
+
+    .message.my {
+        background: #d2f8c6;
+        margin-left: auto;
+    }
+
+    .input-area {
+        display: flex;
+        padding: 15px;
+        background: white;
+        gap: 10px;
+    }
+
+    .input-area input {
+        flex: 1;
+        padding: 13px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+        font-size: 15px;
+    }
+
+    button {
+        border: none;
+        background: #229ed9;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 15px;
+    }
+
+    button:hover {
+        background: #168ac1;
+    }
+</style>
+<div class="header">
+    💬 MySocial
+</div>
+
+<div class="container">
+
+    <div class="sidebar">
+
+        <div class="profile">
+            <div class="profile-name">👤 Яна</div>
+            <div>Мой профиль</div>
+        </div>
+
+        <div class="user">👩 Алина</div>
+        <div class="user">👦 Максим</div>
+        <div class="user">👩 Даша</div>
+        <div class="user">👦 Артём</div>
+
+    </div>
+
+    <div class="chat">
+
+        <div class="chat-header">
+            💬 Чат с Алиной
+        </div>
+
+        <div class="messages" id="messages">
+
+            <div class="message">
+                Привет! 👋
+            </div>
+
+            <div class="message my">
+                Привет! Как дела?
+            </div>
+
+        </div>
+
+        <div class="input-area">
+            <input id="messageInput" type="text" placeholder="Написать сообщение...">
+            <button onclick="sendMessage()">Отправить</button>
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    function sendMessage() {
+        const input = document.getElementById("messageInput");
+        const messages = document.getElementById("messages");
+
+        if (input.value.trim() === "") {
+            return;
+        }
+
+        const message = document.createElement("div");
+        message.className = "message my";
+        message.textContent = input.value;
+
+        messages.appendChild(message);
+
+        input.value = "";
+
+        messages.scrollTop = messages.scrollHeight;
+    }
+</script>
